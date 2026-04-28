@@ -43,7 +43,7 @@ body {
   max-width: 800px;
   margin: 60px auto;
   padding: 0 20px;
-  align-items: center;
+  text-align: center;
 }
 
 .gallery {

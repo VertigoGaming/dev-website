@@ -46,6 +46,16 @@ body {
   text-align: center;
 }
 
+.section h2 {
+  margin-bottom: 15px;
+}
+
+.section p {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 300px));

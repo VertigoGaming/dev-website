@@ -43,6 +43,7 @@ body {
   max-width: 800px;
   margin: 60px auto;
   padding: 0 20px;
+  align-items: center;
 }
 
 .gallery {
@@ -55,6 +56,33 @@ body {
 .gallery img {
   width: 100%;
   border-radius: 6px;
+}
+
+.gallery img {
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 8px;
 }
 
 footer {

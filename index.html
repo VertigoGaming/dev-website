@@ -27,9 +27,13 @@
     </p>
 
     <div class="gallery">
-      <img src="assets/screenshot_1.webp" alt="Crimson High visual novel screenshot">
-      <img src="assets/screenshot_2.png" alt="Crimson High character scene screenshot">
-    </div>
+	  <img src="assets/screenshot_1.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)">
+	  <img src="assets/screenshot_2.png" alt="Crimson High screenshot" onclick="openLightbox(this.src)">
+	</div>
+
+	<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+	  <img id="lightbox-img" src="" alt="Expanded screenshot">
+	</div>
   </section>
 
   <section class="section">
@@ -54,6 +58,17 @@
   <footer>
     <p>© VertigoAVN</p>
   </footer>
+
+  <script>
+  function openLightbox(src) {
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("lightbox").style.display = "flex";
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+</script>
 
 </body>
 </html>

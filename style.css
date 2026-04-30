@@ -136,7 +136,7 @@ body {
   font-size: 18px;
   font-weight: 700;
 
-  /* box-shadow: 0 0 12px rgba(160, 0, 42, 0.35); */
+  box-shadow: 0 0 8px #fff;
   
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -201,8 +201,8 @@ body {
 }
 
 .character-card:hover .character-name {
-  box-shadow: 0 0 18px #800813;
-  transform: scale(1.04);
+  box-shadow: 0 0 12px #800813;
+  transform: scale(1.04) translateY(-2px);
 }
 
 .character-card p {

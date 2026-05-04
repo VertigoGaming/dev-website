@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>Crimson High | VertigoAVN</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/favicon.png">
   <meta property="og:title" content="Crimson High" />
   <meta property="og:description" content="A fun, light-hearted visual novel where every bond hides something mysterious." />
   <meta property="og:image" content="https://vertigoavn.com/assets/preview_1.webp" />
@@ -109,30 +110,95 @@
   </div>
 </section>
 
-  <section class="section">
-    <h2>Why play?</h2>
-    <p>
-      Character-focused storytelling, light-hearted comedy, mysterious secrets, and evolving relationships.
-    </p>
+<section class="section">
+  <h2>Play Crimson High</h2>
 
-    <div class="buttons">
-      <a href="https://vertigoavn.itch.io/crimsonhigh" class="btn">Start playing</a>
-      <a href="https://www.patreon.com/crimsonhigh" class="btn secondary">Support development</a>
-    </div>
-  </section>
+  <p>Start your journey now and uncover what lies beneath Crimson High.</p>
 
-  <section class="section">
+  <div class="buttons">
+    <a href="https://vertigoavn.itch.io/crimsonhigh" class="btn">Play Free Demo</a>
+    <a href="https://www.patreon.com/crimsonhigh" class="btn secondary">Get Early Access</a>
+  </div>
+</section>
+
+<section class="section">
+  <h2>What to Expect</h2>
+
+  <ul class="features">
+    <li> A colorful cast of unique personalities and hidden secrets</li>
+    <li> High quality visuals</li>
+    <li> A mix of lighthearted moments and darker mysteries</li>
+    <li> Great humor</li>
+    <li> A likeable main character</li>
+  </ul>
+</section>
+
+<section class="section">
     <h2>About VertigoAVN</h2>
     <p>
       Hey there, I'm Vertigo — an indie visual novel developer creating Crimson High.
     </p>
-  </section>
+</section>
 
-  <footer>
-    <p>© VertigoAVN</p>
-  </footer>
+<section class="section">
+  <h2>FAQ</h2>
 
-  <script>
+  <p><strong>Is the game free?</strong><br>
+  Yes! You can play the latest public build on itch.io.</p>
+
+  <p><strong>What do I get on Patreon?</strong><br>
+  Early access to new updates, custom renders, and more.</p>
+
+  <p><strong>What platforms are supported?</strong><br>
+  PC (Windows/Linux), Mac, Android</p>
+  
+  <p><strong>Will the game feature NTR/sharing content?</strong><br>
+  No, the game won't ever have any NTR/sharing content.</p>
+  
+  <p><strong></strong><br>
+  </p>
+  
+  <p><strong></strong><br>
+  </p>
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <p>
+    You have questions, feedback, or business inquiries? Send me a message.
+  </p>
+
+  <form action="https://formspree.io/f/mjglvqvk" method="POST" class="contact-form">
+	<input type="text" name="name" placeholder="Your name" required>
+
+    <input type="email" name="email" placeholder="Your email" required>
+
+    <textarea name="message" placeholder="Your message" required></textarea>
+
+	<p class="form-note">
+    You may be asked to complete a quick CAPTCHA before your message is sent.
+	</p>
+    <button type="submit" class="btn" id="submit-btn">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© VertigoAVN</p>
+</footer>
+
+<script>
+  const form = document.querySelector(".contact-form");
+  const button = document.getElementById("submit-btn");
+
+  if (form && button) {
+    form.addEventListener("submit", () => {
+      button.disabled = true;
+	  button.innerHTML = "Sending <span class='dots'>...</span>";
+    });
+  }
+</script>
+
+<script>
   function openLightbox(src) {
     document.getElementById("lightbox-img").src = src;
     document.getElementById("lightbox").style.display = "flex";
@@ -143,5 +209,15 @@
   }
 </script>
 
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("success") === "true") {
+    const msg = document.getElementById("form-success");
+    if (msg) {
+      msg.style.display = "block";
+    }
+  }
+</script>
 </body>
 </html>

@@ -48,14 +48,35 @@ body {
   display: inline-block;
   padding: 12px 24px;
   margin: 5px;
+
   background: #800813;
   color: white;
   text-decoration: none;
+
   border-radius: 4px;
+  border: none;
+  cursor: pointer;
+
+  font: inherit;
 }
 
 .btn.secondary {
   background: #333;
+}
+
+.btn:disabled {
+  background: #555;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.dots {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
 }
 
 .section {
@@ -73,6 +94,23 @@ body {
   max-width: 600px;
   margin: 0 auto;
   margin-bottom: 20px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+}
+
+.features li::before {
+  content: "✔";
+  color: #800813;
+  font-weight: bold;
+}
+
+.features li {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #ccc;
 }
 
 .gallery {
@@ -213,8 +251,53 @@ body {
   margin: 0 auto;
 }
 
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 520px;
+  margin: 25px auto 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 6px;
+
+  color: #fff;
+  font: inherit;
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: rgba(160, 0, 42, 0.8);
+  box-shadow: 0 0 12px rgba(160, 0, 42, 0.3);
+}
+
+.form-note {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 10px;
+}
+
 footer {
   text-align: center;
-  padding: 40px;
+  padding: 20px;
   color: #777;
 }

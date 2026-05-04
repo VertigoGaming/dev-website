@@ -99,18 +99,29 @@ body {
 .features {
   list-style: none;
   padding: 0;
+  margin: 20px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px 24px;
+
+  max-width: 700px;
+}
+
+.features li {
+  position: relative;
+  padding-left: 25px;
+  text-align: left;
+  color: #ccc;
+  line-height: 1.5;
 }
 
 .features li::before {
   content: "✔";
-  color: #800813;
+  position: absolute;
+  left: 0;
+  color: #a0002a;
   font-weight: bold;
-}
-
-.features li {
-  margin: 10px 0;
-  font-size: 16px;
-  color: #ccc;
 }
 
 .gallery {
@@ -256,7 +267,7 @@ body {
   flex-direction: column;
   gap: 12px;
   max-width: 520px;
-  margin: 25px auto 0;
+  margin: 5px auto 0;
 }
 
 .contact-form input,
@@ -301,3 +312,10 @@ footer {
   padding: 20px;
   color: #777;
 }
+
+/* --- responsive tweaks --- */
+/* @media (max-width: 600px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+} */

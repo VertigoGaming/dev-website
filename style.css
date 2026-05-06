@@ -1,16 +1,20 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #0d0d0d;
+  background: linear-gradient(to bottom, #000, #180203);
   color: #e6e6e6;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 
 .hero {
   text-align: center;
-  padding: 50px 20px;
+  padding: 110px 20px 40px;
 
   background:
-    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.97)),
+    linear-gradient(to bottom, #00000005, #000),
     url("assets/hero_background.png");
 
   background-size: cover;
@@ -28,16 +32,76 @@ body {
 
 .visually-hidden {
   position: absolute;
-  left: -9998px;
+  left: -9999px;
+}
+
+.accent {
+  color: #800813;
 }
 
 .tagline {
   text-align: center;
   font-size: 18px;
-  color: #bbb;
+  color: #DEDEDE;
   max-width: 700px;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 40px auto;
   line-height: 1.5;
+}
+
+.divider {
+  height: 1px;
+  max-width: 600px;
+  margin: 20px auto;
+  animation: glow 3s infinite alternate;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    #FFFFFF90,
+    transparent
+  );
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.divider.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0.6;
+    box-shadow: 0 0 5px rgba(160, 0, 42, 0.3);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 12px rgba(160, 0, 42, 0.6);
+  }
+}
+
+.early-note {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+#early-access {
+  background: rgba(160, 0, 42, 0.08);
+  border: 1px solid rgba(160, 0, 42, 0.2);
+  border-radius: 10px;
+  padding: 40px 20px;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(160, 0, 42, 0.8);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-bottom: 10px;
 }
 
 .buttons {
@@ -70,6 +134,12 @@ body {
   opacity: 0.7;
 }
 
+.platforms {
+  margin-top: 12px;
+  color: #aaa;
+  font-size: 14px;
+}
+
 .dots {
   animation: blink 1s infinite;
 }
@@ -84,6 +154,7 @@ body {
   margin: 60px auto;
   padding: 0 20px;
   text-align: center;
+  /* background: radial-gradient(circle at top, #1a0008, #000); */
 }
 
 .section h2 {
@@ -124,6 +195,67 @@ body {
   font-weight: bold;
 }
 
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+
+  padding: 12px 20px;
+  text-align: center;
+
+  transform: translateY(-100%);
+  opacity: 0;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.navbar.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+}
+
+.navbar a {
+  display: inline-block;
+  padding: 8px 14px;
+  margin: 0 5px;
+
+  color: #ccc;
+  text-decoration: none;
+
+  border-radius: 6px;
+
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.navbar a:hover {
+  background: rgba(160, 0, 42, 0.6);
+  color: #fff;
+}
+
+.navbar a.active {
+  background: #C50D1C;
+  color: #fff;
+}
+
+.navbar a.active:hover {
+  background: #C50D1C;
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
@@ -150,7 +282,7 @@ body {
 .lightbox {
   display: none;
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
   inset: 0;
   background: rgba(0, 0, 0, 0.85);
   justify-content: center;
@@ -262,6 +394,118 @@ body {
   margin: 0 auto;
 }
 
+.merch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.merch-image {
+  position: relative;
+  width: fit-content;
+  max-width: 220px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.25s ease;
+}
+
+.merch-image img {
+  width: 100%;
+  display: block;
+}
+
+.merch-card:hover .merch-image {
+  transform: scale(1.05);
+}
+
+.price-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+
+  padding: 5px 10px;
+  background: #800813;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.merch-card {
+  display: block;
+  position: relative;
+
+  text-decoration: none;
+  color: inherit;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.merch-card img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.25s ease;
+}
+
+.merch-card:hover img {
+  transform: scale(1.05);
+}
+
+.merch-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(160, 0, 42, 0.8);
+  box-shadow: 0 0 20px rgba(160, 0, 42, 0.35);
+}
+
+.merch-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.overlay span {
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+
+.merch-card:hover .overlay span {
+  transform: translateY(0);
+  opacity: 1;
+  scale: 1.2;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -305,6 +549,51 @@ body {
   font-size: 12px;
   color: #aaa;
   margin-top: 10px;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1000;
+
+  width: 45px;
+  height: 45px;
+
+  background: #800813;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+
+  font-size: 20px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+
+  transition: all 0.3s ease;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  background: #C50D1C;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 150px;
 }
 
 footer {

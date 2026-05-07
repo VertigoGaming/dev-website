@@ -35,13 +35,15 @@ h2 {
 }
 
 .cta-title-1 {
-  font-size: clamp(12px, 6vw, 32px);
+  font-size: clamp(12px, 6vw, 24px);
   margin: 0;
+  margin-bottom: -6px;
 }
 
 .cta-title-2 {
   font-size: clamp(48px, 6vw, 62px);
   margin: 0;
+  letter-spacing: 0px;
 }
 
 .logo {
@@ -114,7 +116,7 @@ h2 {
   background: rgba(160, 0, 42, 0.08);
   border: 1px solid rgba(160, 0, 42, 0.2);
   border-radius: 10px;
-  padding: 0px 20px 60px;
+  padding: 0px 20px 44px;
 }
 
 .badge {
@@ -153,7 +155,7 @@ h2 {
   font: inherit;
 }
 
-.icon {
+.icon_itch {
 	position: relative;
 	top: -0px;
 	left: -10px;
@@ -163,6 +165,7 @@ h2 {
   display: inline-flex;
   background: #800813;
   color: #fff;
+  border: 1px solid #d32e2e;
 
   font-size: 18px;
   font-weight: bold;
@@ -184,8 +187,49 @@ h2 {
   gap: 10px;
 }
 
+.patreon {
+  background: #000000;
+  color: #fff;
+  border: 1px solid #fff;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.payhip {
+  background: #000000;
+  color: #fff;
+  border: 1px solid #7d80e7;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.accent-patreon {
+  color: #fff;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.accent-payhip {
+  color: #7d80e7;
+  margin: 0;
+  padding: 0;
+}
+
 .support-btn:hover {
   background: rgba(255,255,255,0.44);
+}
+
+.patreon:hover {
+  background: #313131;
+}
+
+.payhip:hover {
+  background: #363647;
 }
 
 .primary-btn img {
@@ -215,6 +259,7 @@ h2 {
 }
 
 .platforms {
+  padding-top: 6px;
   margin-top: 12px;
   color: #aaa;
   font-size: 14px;

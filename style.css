@@ -106,12 +106,18 @@ body.no-scroll {
 
 .buttons {
   margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
   padding: 12px 24px;
   margin: 5px;
+  
+  align-items: center;
 
   background: #800813;
   color: white;
@@ -124,8 +130,59 @@ body.no-scroll {
   font: inherit;
 }
 
+.icon {
+	position: relative;
+	top: -0px;
+	left: -10px;
+}
+
+.primary-btn {
+  display: inline-flex;
+  background: #800813;
+  color: #fff;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  padding: 12px 30px;
+
+  box-shadow: 0 0 18px #800813;
+}
+
+.primary-btn:hover {
+  background: #C50D1C;
+}
+
+.support-btn {
+  background: rgba(255,255,255,0.25);
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.support-btn:hover {
+  background: rgba(255,255,255,0.44);
+}
+
+.primary-btn img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.support-btn img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
 .btn.secondary {
   background: #333;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
 }
 
 .btn:disabled {

@@ -173,6 +173,9 @@ h2 {
   padding: 12px 30px;
 
   box-shadow: 0 0 18px #800813;
+  min-width: 200px;
+  
+  justify-content: center;
 }
 
 .primary-btn:hover {
@@ -185,6 +188,9 @@ h2 {
   display: flex;
   align-items: center;
   gap: 10px;
+  min-width: 200px;
+  
+  justify-content: center;
 }
 
 .patreon {

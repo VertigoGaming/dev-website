@@ -5,6 +5,7 @@
   <title>Crimson High | VertigoAVN</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="assets/favicon.png">
+  <link rel="preload" as="image" href="assets/hero_background.webp">
   <meta property="og:title" content="Crimson High" />
   <meta property="og:description" content="A fun, light-hearted visual novel where every bond hides something mysterious." />
   <meta property="og:image" content="https://vertigoavn.com/assets/preview.webp" />
@@ -21,13 +22,37 @@
 <body>
 
 <nav class="navbar">
-  <a href="#characters" class="btn">Characters</a>
+  <a href="#characters" class="btn">Cast</a>
   <a href="#features" class="btn">Features</a>
-  <a href="#early-access" class="btn">Early Access</a>
   <a href="#screenshots" class="btn">Screenshots</a>
+  <a href="#early-access" class="btn big">Play</a>
   <a href="#faq" class="btn">FAQ</a>
-  <a href="#about" class="btn">About</a>
+  <a href="#about" class="btn">About Vertigo</a>
   <a href="#contact" class="btn">Contact</a>
+  
+  <a href="https://www.patreon.com/crimsonhigh"
+   class="btn social-nav patreon-nav"
+   target="_blank"
+   rel="noopener noreferrer"
+   data-tooltip="Patreon">
+  <img src="assets/icons/patreon_logo.svg" alt="">
+  </a>
+  
+  <a href="https://ko-fi.com/vertigoavn"
+   class="btn social-nav kofi-nav"
+   target="_blank"
+   rel="noopener noreferrer"
+   data-tooltip="Ko-Fi">
+  <img src="assets/icons/kofi_logo.svg" alt="">
+  </a>
+  
+  <a href="https://discord.gg/crimsonhigh"
+   class="btn social-nav discord-nav"
+   target="_blank"
+   rel="noopener noreferrer"
+   data-tooltip="Discord">
+  <img src="assets/icons/discord_logo.svg" alt="">
+  </a>
 </nav>
 
 <section class="hero">
@@ -66,21 +91,30 @@
      target="_blank"
      rel="noopener noreferrer">
     <img src="assets/icons/patreon_logo.svg" alt="" class="icon_patreon">
-    Support on<span class="accent-patreon">Patreon</span>
+    Early Access on<span class="accent-patreon">Patreon</span>
   </a>
 
-  <!<a href="https://ko-fi.com/vertigoavn"
+  <a href="https://ko-fi.com/vertigoavn"
      class="btn support-btn kofi"
      target="_blank"
      rel="noopener noreferrer">
-    <!<img src="assets/icons/kofi_logo.svg" alt="" class="icon_payhip">
-    <!Support on<span class="accent-kofi"><!Ko-Fi</span>
+    <img src="assets/icons/kofi_logo.svg" alt="" class="icon_payhip">
+    Early Access on<span class="accent-kofi">Ko-Fi</span>
   </a>
   </div>
   
   <p class="platforms">
     Available on: Windows · Linux · Mac · Android
   </p>
+  
+  <div class="community-link">
+  <a href="https://discord.gg/crimsonhigh"
+     target="_blank"
+     rel="noopener noreferrer">
+    <img src="assets/icons/discord_logo.svg" alt="">
+    Join 3500+ players on Discord
+  </a>
+</div>
 </section>
 
 <div class="divider"></div>
@@ -93,41 +127,41 @@
 
   <div class="characters">
     <div class="character-card">
-      <img src="assets/spotlights/spotlight_aki.webp" alt="Character name">
+      <img src="assets/spotlights/spotlight_aki.webp" alt="Character name" loading="lazy">
 	  <h3 class="character-name">Aki Anzou</h3>
       <p>Confident and teasing, Aki is impossible to read.
 	  Something dark lingers behind her eyes.</p>
     </div>
 
     <div class="character-card">
-      <img src="assets/spotlights/spotlight_kanakagome.webp" alt="Character name">
+      <img src="assets/spotlights/spotlight_kanakagome.webp" alt="Character name" loading="lazy">
 	  <h3 class="character-name">Kana & Kagome Kojima</h3>
       <p>Opposites in many ways, yet inseparable.
 	  The twins are always together.. or are they?</p>
     </div>
 
     <div class="character-card">
-      <img src="assets/spotlights/spotlight_miko.webp" alt="Character name">
+      <img src="assets/spotlights/spotlight_miko.webp" alt="Character name" loading="lazy">
 	  <h3 class="character-name">Miko Minami</h3>
       <p>Kind, gentle, and effortlessly wholesome.
 	  But how much of it is real?</p>
     </div>
 
     <div class="character-card">
-      <img src="assets/spotlights/spotlight_nene.webp" alt="Character name">
+      <img src="assets/spotlights/spotlight_nene.webp" alt="Character name" loading="lazy">
 	  <h3 class="character-name">Nene Nobuyo</h3>
       <p>Painfully shy and impossibly adorable.
 	  But what is she hiding behind her mask?</p>
     </div>
 
     <div class="character-card">
-      <img src="assets/spotlights/spotlight_okami.webp" alt="Character name">
+      <img src="assets/spotlights/spotlight_okami.webp" alt="Character name" loading="lazy">
 	  <h3 class="character-name">Okami Oda</h3>
       <p>Elegant, distant, and unapproachable, there is something dangerous about Okami. Are you brave enough to find out?</p>
     </div>
 
     <div class="character-card">
-      <img src="assets/spotlights/spotlight_suzu.webp" alt="Character name">
+      <img src="assets/spotlights/spotlight_suzu.webp" alt="Character name" loading="lazy">
       <h3 class="character-name">Suzu Shinozaki</h3>
       <p>A princess without her throne.
 	  Why does she seem more vulnerable than anyone else?</p>
@@ -158,18 +192,18 @@
   </p>
 
   <div class="gallery">
-	<img src="assets/screenshots/screenshot_1.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)">
-	<img src="assets/screenshots/screenshot_2.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)">
-	<img src="assets/screenshots/screenshot_3.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)">
-	<img src="assets/screenshots/screenshot_4.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)">
-	<img src="assets/screenshots/screenshot_5.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)">
-	<img src="assets/screenshots/screenshot_6.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)">
-	<img src="assets/screenshots/screenshot_7.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)">
-	<img src="assets/screenshots/screenshot_8.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)">
-	<img src="assets/screenshots/screenshot_9.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)">
-	<img src="assets/screenshots/screenshot_10.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)">
-	<img src="assets/screenshots/screenshot_11.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)">
-	<img src="assets/screenshots/screenshot_12.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)">
+	<img src="assets/screenshots/screenshot_1.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)" loading="lazy">
+	<img src="assets/screenshots/screenshot_2.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)" loading="lazy">
+	<img src="assets/screenshots/screenshot_3.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)" loading="lazy">
+	<img src="assets/screenshots/screenshot_4.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)" loading="lazy">
+	<img src="assets/screenshots/screenshot_5.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)" loading="lazy">
+	<img src="assets/screenshots/screenshot_6.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)" loading="lazy">
+	<img src="assets/screenshots/screenshot_7.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)" loading="lazy">
+	<img src="assets/screenshots/screenshot_8.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)" loading="lazy">
+	<img src="assets/screenshots/screenshot_9.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)" loading="lazy">
+	<img src="assets/screenshots/screenshot_10.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)" loading="lazy">
+	<img src="assets/screenshots/screenshot_11.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)" loading="lazy">
+	<img src="assets/screenshots/screenshot_12.webp" alt="Crimson High screenshot" onclick="openLightbox(this.src)" loading="lazy">
   </div>
 
   <div id="lightbox" class="lightbox" onclick="closeLightbox()">
@@ -183,13 +217,13 @@
   <h2><span class="accent">FAQ</span></h2>
 
   <p><strong>Is the game free?</strong><br>
-  Yes! You can play the latest public build on itch.io.</p>
+  Yes! You can play the latest public build on both itch.io and Patreon.</p>
   
   <p><strong>Why should I support you?</strong><br>
-  I'm creating the game full-time, which allows me to release new content as regularly as I do. However, that can only work as long as I can live off of it.</p>
+  I'm creating the game full-time, which allows me to release new content as regularly as I do. However, that can only work as long as I can live off of it, and by supporting me, you can make sure that's the case.</p>
 
   <p><strong>What do I get on Patreon?</strong><br>
-  Early access to new updates, custom renders, and more.</p>
+  Early access to new updates, poll participation, Discord channel access, custom renders, and more.</p>
 
   <p><strong>What platforms are supported?</strong><br>
   Windows · Linux · Mac · Android</p>
@@ -207,7 +241,7 @@
   <h2><span class="accent">About VertigoAVN</span></h2>
   <p>
     Hey there, I'm Vertigo — an indie visual novel developer creating Crimson High.
-	Being a huge fan of visual novels in general and those made with Koikatsu in particular,
+	Being a huge fan of visual novels in general, and those made with Koikatsu in particular,
 	I decided to give it a try myself and funnel my imagination into creating a fantastic world,
 	filled with cute girls, that doesn't take itself too seriously.
   </p>
@@ -230,12 +264,12 @@
   </ul>
 
   <div class="buttons">
-    <a href="https://vertigoavn.itch.io/crimsonhigh"
+    <!a href="https://vertigoavn.itch.io/crimsonhigh"
      class="btn primary-btn"
      target="_blank"
      rel="noopener noreferrer">
-	 <img src="assets/icons/itch_logo.svg" alt="" class="icon_itch">
-    Play for free
+	 <!img src="assets/icons/itch_logo.svg" alt="" class="icon_itch">
+    <!Play for free
   </a>
 
   <a href="https://www.patreon.com/crimsonhigh"
@@ -246,12 +280,12 @@
     Support on<span class="accent-patreon">Patreon</span>
   </a>
 
-  <!<a href="https://ko-fi.com/vertigoavn"
+  <a href="https://ko-fi.com/vertigoavn"
      class="btn support-btn kofi"
      target="_blank"
      rel="noopener noreferrer">
-    <!<img src="assets/icons/kofi_logo.svg" alt="" class="icon_payhip">
-    <!Support on<span class="accent-kofi"><!Ko-Fi</span>
+    <img src="assets/icons/kofi_logo.svg" alt="" class="icon_payhip">
+    Support on<span class="accent-kofi">Ko-Fi</span>
   </a>
   </div>
 
@@ -275,10 +309,10 @@
 
     <textarea name="message" placeholder="Your message" required></textarea>
 
+    <button type="submit" class="btn" id="submit-btn">Send Message</button>
 	<p class="form-note">
     You may be asked to complete a quick CAPTCHA before your message is sent.
 	</p>
-    <button type="submit" class="btn" id="submit-btn">Send Message</button>
   </form>
 </section>
 
